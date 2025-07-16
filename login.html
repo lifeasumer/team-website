@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login / Sign Up - Cinderella.pk</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/cinderella-premium.css">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+	
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="container-menu-desktop">
+			<!-- Topbar -->
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+						Free shipping for orders over ₨5,000
+					</div>
+
+					<div class="right-top-bar flex-w h-full">
+						<a href="help.html" class="flex-c-m trans-04 p-lr-25">
+							Help & FAQs
+						</a>
+
+						<a href="my-account.html" class="flex-c-m trans-04 p-lr-25">
+							My Account
+						</a>
+
+						<div class="language-selector">
+							<select class="flex-c-m trans-04 p-lr-25" id="languageSelect">
+								<option value="en">EN</option>
+								<option value="ar">العربية</option>
+								<option value="de">Deutsch</option>
+								<option value="fr">Français</option>
+								<option value="zh">中文</option>
+							</select>
+						</div>
+
+						<div class="currency-selector">
+							<select class="flex-c-m trans-04 p-lr-25" id="currencySelect">
+								<option value="pkr">PKR</option>
+								<option value="aed">AED</option>
+								<option value="usdt">USDT</option>
+							</select>
+						</div>
+
+						<a href="login.html" class="flex-c-m trans-04 p-lr-25">
+							Login / Sign Up
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="index.html" class="logo">
+						<img src="images/cinderella-original-logo.png" alt="Cinderella - Dress Your Princess" style="height: 60px;">
+					</a>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+
+							<li>
+								<a href="bridal.html">Bridal Dress</a>
+							</li>
+
+							<li>
+								<a href="luxury.html">Luxury Wear</a>
+							</li>
+
+							<li>
+								<a href="girls.html">Girls Collection</a>
+							</li>
+
+							<li>
+								<a href="traditional.html">Traditional Wear</a>
+							</li>
+
+							<li>
+								<a href="affiliate.html">Affiliate</a>
+							</li>
+
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>	
+
+					<!-- Icon header -->
+					<div class="wrap-icon-header flex-w flex-r-m">
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							<i class="zmdi zmdi-search"></i>
+						</div>
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0">
+							<i class="zmdi zmdi-shopping-cart"></i>
+						</div>
+
+						<a href="wishlist.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-lr-25 icon-header-noti" data-notify="0">
+							<i class="zmdi zmdi-favorite-outline"></i>
+						</a>
+					</div>
+				</nav>
+			</div>	
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="index.html">
+					<img src="images/cinderella-original-logo.png" alt="Cinderella" style="height: 40px;">
+				</a>
+			</div>
+
+			<!-- Icon header -->
+			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+					<i class="zmdi zmdi-search"></i>
+				</div>
+
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="0">
+					<i class="zmdi zmdi-shopping-cart"></i>
+				</div>
+
+				<a href="wishlist.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
+					<i class="zmdi zmdi-favorite-outline"></i>
+				</a>
+			</div>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="menu-mobile">
+			<ul class="topbar-mobile">
+				<li>
+					<div class="left-top-bar">
+						Free shipping for orders over ₨5,000
+					</div>
+				</li>
+
+				<li>
+					<div class="right-top-bar flex-w h-full">
+						<a href="help.html" class="flex-c-m p-lr-10 trans-04">
+							Help & FAQs
+						</a>
+
+						<a href="my-account.html" class="flex-c-m p-lr-10 trans-04">
+							My Account
+						</a>
+
+						<select class="flex-c-m p-lr-10 trans-04" id="languageSelectMobile">
+							<option value="en">EN</option>
+							<option value="ar">العربية</option>
+							<option value="de">Deutsch</option>
+							<option value="fr">Français</option>
+							<option value="zh">中文</option>
+						</select>
+
+						<select class="flex-c-m p-lr-10 trans-04" id="currencySelectMobile">
+							<option value="pkr">PKR</option>
+							<option value="aed">AED</option>
+							<option value="usdt">USDT</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="main-menu-m">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+
+				<li>
+					<a href="bridal.html">Bridal Dress</a>
+				</li>
+
+				<li>
+					<a href="luxury.html">Luxury Wear</a>
+				</li>
+
+				<li>
+					<a href="girls.html">Girls Collection</a>
+				</li>
+
+				<li>
+					<a href="traditional.html">Traditional Wear</a>
+				</li>
+
+				<li>
+					<a href="affiliate.html">Affiliate</a>
+				</li>
+
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Modal Search -->
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="images/icons/icon-close2.png" alt="CLOSE">
+				</button>
+
+				<form class="wrap-search-header flex-w p-l-15">
+					<button class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+					<input class="plh3" type="text" name="search" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<!-- Cart -->
+	<div class="wrap-header-cart js-panel-cart">
+		<div class="s-full js-hide-cart"></div>
+
+		<div class="header-cart flex-col-l p-l-65 p-r-25">
+			<div class="header-cart-title flex-w flex-sb-m p-b-8">
+				<span class="mtext-103 cl2">
+					Your Cart
+				</span>
+
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+					<i class="zmdi zmdi-close"></i>
+				</div>
+			</div>
+			
+			<div class="header-cart-content flex-w js-pscroll">
+				<div class="w-full">
+					<div class="header-cart-total w-full p-tb-40">
+						Total: ₨0.00
+					</div>
+
+					<div class="header-cart-buttons flex-w w-full">
+						<a href="cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+							View Cart
+						</a>
+
+						<a href="checkout.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+							Check Out
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login/Signup Section -->
+	<section class="login-section">
+		<div class="login-bg">
+			<div class="stars"></div>
+			<div class="twinkling"></div>
+		</div>
+		
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="login-container">
+						<div class="login-header">
+							<img src="images/cinderella-original-logo.png" alt="Cinderella" style="height: 80px; margin-bottom: 20px;">
+							<h2>Welcome to Cinderella</h2>
+							<p>Dress Your Princess</p>
+						</div>
+
+						<div class="login-tabs">
+							<button class="tab-btn active" onclick="showTab('login')">Login</button>
+							<button class="tab-btn" onclick="showTab('signup')">Sign Up</button>
+						</div>
+
+						<!-- Login Form -->
+						<div id="login-form" class="auth-form active">
+							<form>
+								<div class="form-group">
+									<label>Email Address</label>
+									<input type="email" required>
+									<i class="fa fa-envelope"></i>
+								</div>
+
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password" required>
+									<i class="fa fa-lock"></i>
+								</div>
+
+								<div class="form-options">
+									<label class="checkbox-container">
+										<input type="checkbox">
+										<span class="checkmark"></span>
+										Remember me
+									</label>
+									<a href="#" class="forgot-password">Forgot Password?</a>
+								</div>
+
+								<button type="submit" class="auth-btn">Login</button>
+
+								<div class="social-login">
+									<p>Or login with</p>
+									<div class="social-buttons">
+										<button type="button" class="social-btn facebook">
+											<i class="fa fa-facebook"></i>
+											Facebook
+										</button>
+										<button type="button" class="social-btn google">
+											<i class="fa fa-google"></i>
+											Google
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<!-- Signup Form -->
+						<div id="signup-form" class="auth-form">
+							<form>
+								<div class="form-row">
+									<div class="form-group half">
+										<label>First Name</label>
+										<input type="text" required>
+										<i class="fa fa-user"></i>
+									</div>
+									<div class="form-group half">
+										<label>Last Name</label>
+										<input type="text" required>
+										<i class="fa fa-user"></i>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label>Email Address</label>
+									<input type="email" required>
+									<i class="fa fa-envelope"></i>
+								</div>
+
+								<div class="form-group">
+									<label>Phone Number</label>
+									<input type="tel" required>
+									<i class="fa fa-phone"></i>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group half">
+										<label>Password</label>
+										<input type="password" required>
+										<i class="fa fa-lock"></i>
+									</div>
+									<div class="form-group half">
+										<label>Confirm Password</label>
+										<input type="password" required>
+										<i class="fa fa-lock"></i>
+									</div>
+								</div>
+
+								<div class="form-options">
+									<label class="checkbox-container">
+										<input type="checkbox" required>
+										<span class="checkmark"></span>
+										I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+									</label>
+								</div>
+
+								<div class="form-options">
+									<label class="checkbox-container">
+										<input type="checkbox">
+										<span class="checkmark"></span>
+										Subscribe to newsletter for updates and exclusive offers
+									</label>
+								</div>
+
+								<button type="submit" class="auth-btn">Create Account</button>
+
+								<div class="social-login">
+									<p>Or sign up with</p>
+									<div class="social-buttons">
+										<button type="button" class="social-btn facebook">
+											<i class="fa fa-facebook"></i>
+											Facebook
+										</button>
+										<button type="button" class="social-btn google">
+											<i class="fa fa-google"></i>
+											Google
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="bridal.html" class="stext-107 cl7 hov-cl1 trans-04">
+								Bridal Dress
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="luxury.html" class="stext-107 cl7 hov-cl1 trans-04">
+								Luxury Wear
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="girls.html" class="stext-107 cl7 hov-cl1 trans-04">
+								Girls Collection
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="traditional.html" class="stext-107 cl7 hov-cl1 trans-04">
+								Traditional Wear
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="shop.html?category=abaya" class="stext-107 cl7 hov-cl1 trans-04">
+								Abaya
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Help
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns 
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 cl7 size-201">
+						Any questions? Visit us at LITSY BITSY X CINDERELLA SHOP LIBERTY GATE PLAZA TARIQ RD, BLOCK C2 GULBERG III, LAHORE or call us on 0341 9748504
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
+
+						<a href="https://wa.me/923419748504" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-whatsapp"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Newsletter
+					</h4>
+
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="uzairahmad942@gmail.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
+
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Cinderella.pk - Dress Your Princess
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/parallax100/parallax100.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script>
+		function showTab(tabName) {
+			// Hide all forms
+			document.querySelectorAll('.auth-form').forEach(form => {
+				form.classList.remove('active');
+			});
+			
+			// Remove active class from all tabs
+			document.querySelectorAll('.tab-btn').forEach(btn => {
+				btn.classList.remove('active');
+			});
+			
+			// Show selected form and activate tab
+			document.getElementById(tabName + '-form').classList.add('active');
+			event.target.classList.add('active');
+		}
+	</script>
+
+	<style>
+		.login-section {
+			min-height: 100vh;
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 100px 0;
+		}
+
+		.login-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		}
+
+		.login-container {
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(20px);
+			border-radius: 20px;
+			padding: 50px;
+			box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+			position: relative;
+			z-index: 10;
+		}
+
+		.login-header {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.login-header h2 {
+			color: #333;
+			margin-bottom: 10px;
+			font-weight: 600;
+		}
+
+		.login-header p {
+			color: #666;
+			font-style: italic;
+		}
+
+		.login-tabs {
+			display: flex;
+			margin-bottom: 40px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+
+		.tab-btn {
+			flex: 1;
+			padding: 15px;
+			background: none;
+			border: none;
+			font-size: 16px;
+			font-weight: 600;
+			color: #666;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			position: relative;
+		}
+
+		.tab-btn.active {
+			color: #6c5ce7;
+		}
+
+		.tab-btn.active::after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+		}
+
+		.auth-form {
+			display: none;
+		}
+
+		.auth-form.active {
+			display: block;
+		}
+
+		.form-row {
+			display: flex;
+			gap: 20px;
+		}
+
+		.form-group {
+			margin-bottom: 25px;
+			position: relative;
+		}
+
+		.form-group.half {
+			flex: 1;
+		}
+
+		.form-group label {
+			display: block;
+			margin-bottom: 8px;
+			color: #333;
+			font-weight: 500;
+		}
+
+		.form-group input {
+			width: 100%;
+			padding: 15px 50px 15px 15px;
+			border: 2px solid #e0e0e0;
+			border-radius: 10px;
+			font-size: 16px;
+			transition: all 0.3s ease;
+			background: rgba(255, 255, 255, 0.9);
+		}
+
+		.form-group input:focus {
+			outline: none;
+			border-color: #6c5ce7;
+			box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+		}
+
+		.form-group i {
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #999;
+			margin-top: 12px;
+		}
+
+		.form-options {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		.checkbox-container {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			font-size: 14px;
+			color: #666;
+		}
+
+		.checkbox-container input {
+			display: none;
+		}
+
+		.checkmark {
+			width: 20px;
+			height: 20px;
+			border: 2px solid #e0e0e0;
+			border-radius: 4px;
+			margin-right: 10px;
+			position: relative;
+			transition: all 0.3s ease;
+		}
+
+		.checkbox-container input:checked + .checkmark {
+			background: #6c5ce7;
+			border-color: #6c5ce7;
+		}
+
+		.checkbox-container input:checked + .checkmark::after {
+			content: '✓';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 12px;
+		}
+
+		.forgot-password {
+			color: #6c5ce7;
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		.forgot-password:hover {
+			text-decoration: underline;
+		}
+
+		.auth-btn {
+			width: 100%;
+			padding: 15px;
+			background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+			border: none;
+			border-radius: 10px;
+			color: white;
+			font-size: 16px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin-bottom: 30px;
+		}
+
+		.auth-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+		}
+
+		.social-login {
+			text-align: center;
+		}
+
+		.social-login p {
+			color: #666;
+			margin-bottom: 20px;
+			position: relative;
+		}
+
+		.social-login p::before,
+		.social-login p::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			width: 40%;
+			height: 1px;
+			background: #e0e0e0;
+		}
+
+		.social-login p::before {
+			left: 0;
+		}
+
+		.social-login p::after {
+			right: 0;
+		}
+
+		.social-buttons {
+			display: flex;
+			gap: 15px;
+		}
+
+		.social-btn {
+			flex: 1;
+			padding: 12px;
+			border: 2px solid #e0e0e0;
+			border-radius: 10px;
+			background: white;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.social-btn.facebook {
+			color: #3b5998;
+		}
+
+		.social-btn.facebook:hover {
+			background: #3b5998;
+			color: white;
+			border-color: #3b5998;
+		}
+
+		.social-btn.google {
+			color: #dd4b39;
+		}
+
+		.social-btn.google:hover {
+			background: #dd4b39;
+			color: white;
+			border-color: #dd4b39;
+		}
+
+		@media (max-width: 768px) {
+			.login-container {
+				padding: 30px 20px;
+				margin: 20px;
+			}
+
+			.form-row {
+				flex-direction: column;
+				gap: 0;
+			}
+
+			.social-buttons {
+				flex-direction: column;
+			}
+		}
+	</style>
+
+</body>
+</html>
+

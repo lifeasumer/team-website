@@ -1,0 +1,151 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Demo",
+      "lastName": "User",
+      "email": "demo@cinderella.pk",
+      "phone": "+92 300 1234567",
+      "password": "demo123",
+      "displayName": "Demo User",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "addresses": {
+        "billing": {
+          "fullName": "Demo User",
+          "company": "Cinderella Fashion",
+          "street": "Liberty Gate Plaza, Tariq Road",
+          "city": "Lahore",
+          "state": "Punjab",
+          "zipCode": "54000",
+          "country": "Pakistan"
+        },
+        "shipping": {
+          "fullName": "Demo User",
+          "company": "Cinderella Fashion",
+          "street": "Liberty Gate Plaza, Tariq Road",
+          "city": "Lahore",
+          "state": "Punjab",
+          "zipCode": "54000",
+          "country": "Pakistan"
+        }
+      },
+      "orders": [
+        {
+          "id": 1001,
+          "date": "2024-03-03",
+          "status": "Completed",
+          "total": 2500,
+          "currency": "PKR",
+          "items": [
+            {
+              "id": 1,
+              "name": "Bridal Dress - Royal Collection",
+              "price": 2500,
+              "quantity": 1,
+              "image": "images/product-01.jpg"
+            }
+          ],
+          "createdAt": "2024-03-03T10:00:00.000Z"
+        }
+      ],
+      "wishlist": [1, 3, 5],
+      "preferences": {
+        "language": "en",
+        "currency": "pkr",
+        "newsletter": true
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Bridal Dress - Royal Collection",
+      "price": 2500,
+      "currency": "PKR",
+      "category": "bridal",
+      "image": "images/product-01.jpg",
+      "description": "Elegant bridal dress from our royal collection",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Luxury Evening Gown",
+      "price": 3500,
+      "currency": "PKR",
+      "category": "luxury",
+      "image": "images/product-02.jpg",
+      "description": "Stunning luxury evening gown for special occasions",
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Girls Party Dress",
+      "price": 1500,
+      "currency": "PKR",
+      "category": "girls",
+      "image": "images/product-03.jpg",
+      "description": "Beautiful party dress for young princesses",
+      "inStock": true
+    },
+    {
+      "id": 4,
+      "name": "Traditional Shalwar Kameez",
+      "price": 2000,
+      "currency": "PKR",
+      "category": "traditional",
+      "image": "images/product-04.jpg",
+      "description": "Classic traditional wear with modern touch",
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "Designer Abaya",
+      "price": 1800,
+      "currency": "PKR",
+      "category": "abaya",
+      "image": "images/product-05.jpg",
+      "description": "Elegant designer abaya for modest fashion",
+      "inStock": true
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "userId": 1,
+      "date": "2024-03-03",
+      "status": "Completed",
+      "total": 2500,
+      "currency": "PKR",
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "price": 2500
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Demo User",
+        "street": "Liberty Gate Plaza, Tariq Road",
+        "city": "Lahore",
+        "state": "Punjab",
+        "zipCode": "54000",
+        "country": "Pakistan"
+      },
+      "createdAt": "2024-03-03T10:00:00.000Z"
+    }
+  ],
+  "settings": {
+    "siteName": "Cinderella.pk",
+    "tagline": "Dress Your Princess",
+    "currencies": ["PKR", "AED", "USDT"],
+    "languages": ["en", "ar", "de", "fr", "zh"],
+    "freeShippingThreshold": 5000,
+    "contact": {
+      "phone": "0341 9748504",
+      "whatsapp": "923419748504",
+      "address": "LITSY BITSY X CINDERELLA SHOP LIBERTY GATE PLAZA TARIQ RD, BLOCK C2 GULBERG III, LAHORE",
+      "email": "uzairahmad942@gmail.com"
+    }
+  }
+}
+
