@@ -594,8 +594,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .main-menu > li.active-menu > a {
   color: #6c7ae0;
 }
-
-
+.icon-header-item.active {
+  color: #6c7ae0; /* or any highlight color you want */
+}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -886,8 +887,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 100vh;
   top: 0;
   right: -400px;
-  background-color: #fff;
-  
+  background-color: transparent;
+  backdrop-filter: blur(30px);
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.34;  
@@ -910,7 +911,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .show-header-cart {
   visibility: visible;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(131, 131, 131, 0.6);
 }
 
 .show-header-cart .header-cart {
@@ -2651,7 +2652,7 @@ input.num-product::-webkit-inner-spin-button {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 .bg2 {background-color: #e6e6e6;} 
-.bg3 {background-color: #ff94c6;}
+.bg3 {background-color: #ffbddc;}
 .bg5 {background-color: rgba(190, 182, 182, 0.5);}
 .bg6 {background-color: #f2f2f2;}
 .bg7 {background-color: #333;}
