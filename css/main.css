@@ -2650,8 +2650,8 @@ input.num-product::-webkit-inner-spin-button {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
-.bg2 {background-color: #e6e6e6;}
-.bg3 {background-color: #ffc3e1;}
+.bg2 {background-color: #e6e6e6;} 
+.bg3 {background-color: #ff94c6;}
 .bg5 {background-color: rgba(190, 182, 182, 0.5);}
 .bg6 {background-color: #f2f2f2;}
 .bg7 {background-color: #333;}
@@ -2692,7 +2692,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 .bor2 {
-  border-radius: 20px;
+  border-radius: 23px;
 }
 
 .bor3 {
@@ -3088,7 +3088,7 @@ input.num-product::-webkit-inner-spin-button {
 .hov-btn1:hover {
   border-color: #222;
   background-color: #222;
-  color: #fff;
+  color: #ff94c6;
 }
 
 .hov-btn1:hover i {
@@ -3104,10 +3104,11 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .hov-btn3:hover {
-  border-color: #717fe0;
-  background-color: #717fe0;
-  color: #fff;
+  border-color: #222;
+  background-color: #222;
+  color: #ff94c6;
 }
+
 
 .hov-btn3:hover i {
   color: #fff;
