@@ -223,7 +223,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Menu ]*/
 .wrap-menu-desktop {
     backdrop-filter: blur(30px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(138, 133, 133, 0.1);
 }
 .wrap-menu-desktop {
   position: fixed;
@@ -3419,8 +3419,8 @@ input.num-product::-webkit-inner-spin-button {
   width: 220px;
   padding: 10px 0;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 10px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
