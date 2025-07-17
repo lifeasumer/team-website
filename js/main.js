@@ -360,24 +360,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
-// Handle Language/Currency submenu hover + click selection
-document.querySelectorAll('.trigger').forEach(trigger => {
-  trigger.addEventListener('mouseenter', function () {
-    const targetId = this.dataset.target;
-
-    // Hide all submenus first
-    document.querySelectorAll('.sub-dropdown').forEach(menu => {
-      menu.style.display = 'none';
-    });
-
-    // Show the targeted submenu
-    const targetMenu = document.querySelector(targetId);
-    if (targetMenu) {
-      targetMenu.style.display = 'flex';
-    }
-  });
-});
-
 // Add active class to clicked item (navbar-style)
 document.querySelectorAll('.sub-dropdown .dropdown-item').forEach(item => {
   item.addEventListener('click', function (e) {
@@ -394,12 +376,6 @@ document.querySelectorAll('.sub-dropdown .dropdown-item').forEach(item => {
   });
 });
 
-// Optional: hide submenu when mouse leaves whole dropdown area
-document.querySelector('.dropdown-menu').addEventListener('mouseleave', function () {
-  document.querySelectorAll('.sub-dropdown').forEach(menu => {
-    menu.style.display = 'none';
-  });
-});
 const products = [
 	{ name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
 	{ name: "Adrona Embellished", price: "₨13,000.00", image: "images/traditional-2.jpg" },
