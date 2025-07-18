@@ -305,61 +305,8 @@
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-	const accountDropdown = document.querySelector('.js-toggle-account');
 
-	if (accountDropdown) {
-		accountDropdown.addEventListener('click', function (e) {
-			e.preventDefault();
-			this.classList.toggle('active');
-		});
-	}
 
-	// Mobile Account Dropdown - works like main menu
-	$('.js-toggle-account-mobile').on('click', function(e){
-		e.preventDefault();
-		$('.menu-mobile-account').slideToggle();
-		$(this).toggleClass('active-account');
-	});
-
-	// Language submenu toggle for mobile
-	$('.js-toggle-language').on('click', function(e){
-		e.preventDefault();
-		$(this).parent().find('.js-submenu-language').slideToggle();
-		$(this).toggleClass('turn-arrow-main-menu-m');
-	});
-
-	// Currency submenu toggle for mobile
-	$('.js-toggle-currency').on('click', function(e){
-		e.preventDefault();
-		$(this).parent().find('.js-submenu-currency').slideToggle();
-		$(this).toggleClass('turn-arrow-main-menu-m');
-	});
-
-	// Close mobile account menu when main menu is toggled
-	$('.btn-show-menu-mobile').on('click', function(){
-		if($('.menu-mobile-account').css('display') == 'block') {
-			$('.menu-mobile-account').slideUp();
-			$('.js-toggle-account-mobile').removeClass('active-account');
-		}
-	});
-
-	// Close mobile account menu when window is resized to desktop
-	$(window).resize(function(){
-		if($(window).width() >= 992){
-			if($('.menu-mobile-account').css('display') == 'block') {
-				$('.menu-mobile-account').css('display','none');
-				$('.js-toggle-account-mobile').removeClass('active-account');
-			}
-			$('.js-submenu-language, .js-submenu-currency').each(function(){
-				if($(this).css('display') == 'block') {
-					$(this).css('display','none');
-					$('.js-toggle-language, .js-toggle-currency').removeClass('turn-arrow-main-menu-m');
-				}
-			});
-		}
-	});
-});
 // Add active class to clicked item (navbar-style)
 document.querySelectorAll('.sub-dropdown .dropdown-item').forEach(item => {
   item.addEventListener('click', function (e) {
