@@ -223,67 +223,6 @@ function changeCurrency(currency) {
     showCurrencyChangeMessage(currency);
 }
 
-function showCurrencyChangeMessage(currency) {
-    // Create a temporary notification
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #28a745;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 5px;
-        z-index: 9999;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: opacity 0.3s ease;
-    `;
-    notification.innerText = `Currency changed to ${currency.toUpperCase()}`;
-    
-    document.body.appendChild(notification);
-    
-    // Remove notification after 3 seconds
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }, 3000);
-}
-
-function showLanguageChangeMessage(lang) {
-    // Create a temporary notification
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #007bff;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 5px;
-        z-index: 9999;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: opacity 0.3s ease;
-    `;
-    notification.innerText = `Language changed to ${lang.toUpperCase()}`;
-    
-    document.body.appendChild(notification);
-    
-    // Remove notification after 3 seconds
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }, 3000);
-}
 
 function initializePrices() {
     // Store original PKR prices on page load

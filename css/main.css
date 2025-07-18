@@ -625,7 +625,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 70px;
   background-color: #fff;
   padding: 15px;
-  display: none;
+  display: absolute;
 
   box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
@@ -695,8 +695,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Menu mobile ]*/
 .menu-mobile {
   width: 100%;
-  background-color: white;
-  display: none;
+  background-color: rgb(53, 0, 245);
+  display: absolute;
 }
 
 .main-menu-m {
