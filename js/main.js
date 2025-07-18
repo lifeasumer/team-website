@@ -386,28 +386,14 @@ const products = [
     { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
     { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
     { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-    { name: "Amal's butterfly dress", price: "₨8,000.00", image: "images/traditional-2.jpg" },
-	// 👉 Add up to 40+ products here
+    	// 👉 Add up to 40+ products here
 ];
 
 // Render products into the container
 const container = document.getElementById('product-list');
 products.forEach((product, index) => {
 	const html = `
-		<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item product-item" style="display: ${index < 8 ? '' : 'none'}">
+		<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item product-item" style="display: ${index < 4 ? '' : 'none'}">
 			<div class="block2">
 				<div class="block2-pic hov-img0">
 					<img src="${product.image}" alt="${product.name}">
