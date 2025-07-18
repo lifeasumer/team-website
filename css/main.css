@@ -470,7 +470,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*------------------------------------------------------------------
 [ Modal search ]*/
 .modal-search-header {
-  position: fixed;
+  position: absolute;
   z-index: 2000;
   width: 100%;
   height: 100%;
@@ -487,7 +487,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .container-search-header {
   width: auto;
   max-width: 100%;
-  position: relative;
+  position: center;
 }
 
 /*---------------------------------------------*/
@@ -1163,6 +1163,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   position: relative;
 }
 
+/* Base styles */
 .item-slick1 {
   height: calc(100vh - 40px);
   background-size: cover;
@@ -1178,11 +1179,38 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 100vh;
 }
 
+/* Desktop Backgrounds */
+.slide-1 {
+  background-image: url('images/slide-01.jpg');
+}
+
+.slide-2 {
+  background-image: url('images/slide-01.jpg');
+}
+
+.slide-3 {
+  background-image: url('images/slide-01.jpg');
+}
+
+/* Mobile Backgrounds */
 @media (max-width: 991px) {
   .item-slick1 {
     height: calc(100vh - 70px) !important;
   }
+
+  .slide-1 {
+    background-image: url('images/slide-01-mobile.jpg');
+  }
+
+  .slide-2 {
+    background-image: url('images/slide-01-mobile.jpg');
+  }
+
+  .slide-3 {
+    background-image: url('images/slide-01-mobile.jpg');
+  }
 }
+
 
 .arrow-slick1 {
   display: -webkit-box;
@@ -2058,6 +2086,47 @@ input.num-product::-webkit-inner-spin-button {
 .block1-txt:hover .block1-info {
   color: #fff;
 }
+
+/* === Make .block1 visually smaller === */
+
+.block1 {
+  height: 220px; /* or try 200px if needed */
+}
+
+.block1 img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.block1-txt {
+  padding: 20px !important;
+}
+
+.block1-name {
+  font-size: 18px !important;
+}
+
+.block1-info {
+  font-size: 14px !important;
+}
+
+.block1-link {
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .block1 {
+    height: 180px;
+  }
+
+  .block1-name {
+    font-size: 16px !important;
+  }
+
+  .block1-info {
+    font-size: 12px !important;
+  }
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Block2 ]*/
