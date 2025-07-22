@@ -1046,7 +1046,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Slick1 ]*/
 .wrap-slick1 {
   position: relative;
-  padding-top: 85px;
+}
+@media (min-width: 992px) {
+  .wrap-slick1 {
+    padding-top: 85px;
+  }
 }
 
 /* Base styles */
@@ -2010,6 +2014,27 @@ input.num-product::-webkit-inner-spin-button {
 
   .block1-info {
     font-size: 12px !important;
+  }
+}
+@media (max-width: 768px) {
+  .block1 {
+    height: 180px;
+  }
+
+  .block1-name {
+    font-size: 16px !important;
+    color: rgba(255, 14, 119, 0.9); /* Pink with dark opacity */
+  }
+
+  .block1-info {
+    font-size: 12px !important;
+    color: rgba(255, 92, 162, 0.9); /* Pink with dark opacity */
+  }
+
+  .block1-txt {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Darker background without blur */
   }
 }
 
