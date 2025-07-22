@@ -695,7 +695,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Menu mobile ]*/
 .menu-mobile {
   width: 100%;
-  background-color: white;
+  background-color: rgb(50, 35, 255);
   display: none;
 }
 
