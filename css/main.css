@@ -108,6 +108,36 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 @media (max-width: 1600px) {
   .container {max-width: 1200px;}
 }
+/* Style the inner content box */
+.affiliate-box {
+  background-color: transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 12px; /* Optional: rounded corners */
+  max-width: 900px; /* Limit width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 60px 40px; /* Add internal spacing */
+}
+.application-box {
+  background: transparent; /* Semi-transparent white */
+  backdrop-filter: blur(30px);          /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  border-radius: 12px;
+  padding: 40px 30px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Optional: subtle border */
+  transition: box-shadow 0.3s ease;
+}
+
+.application-box:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .application-box {
+    padding: 25px 20px;
+  }
+}
 
 /*------------------------------------------------------------------
 [ Slick2 ]*/
@@ -3518,3 +3548,27 @@ input.num-product::-webkit-inner-spin-button {
   font-weight: bold;
 }
 /*//////////////////////////////////////////////////////*/
+input {
+  background-color: transparent;
+  border: 2px solid #ff69b4; /* Pink border (hot pink) */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Small black shadow */
+  padding: 12px;
+  border-radius: 6px;
+  color: #000; /* Ensure text is visible */
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff1493; /* Darker pink on fo*/
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+/*//////////////////////////////////////////////////////*/
+select#experience {
+  background-color: transparent;
+  color: #000;
+  border: 0.1px solid #9b9b9b;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px;
+  border-radius: 8px;
+}
