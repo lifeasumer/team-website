@@ -299,7 +299,6 @@ function initializeDesktopDropdowns() {
     });
 }
 
-// Initialize mobile dropdown functionality
 function initializeMobileDropdowns() {
     // Mobile account toggle
     document.querySelectorAll('.js-toggle-account-mobile').forEach(toggle => {
@@ -311,69 +310,110 @@ function initializeMobileDropdowns() {
             }
         });
     });
-    
-    // Mobile language toggle
+
+    // Utility: toggle submenu with arrow rotation
+    function toggleSubMenu(toggleBtn, submenuSelector) {
+        const submenu = document.querySelector(submenuSelector);
+
+        if (submenu) {
+            const isVisible = submenu.style.display === 'block';
+
+            // Close all submenus of same type first
+            document.querySelectorAll(submenuSelector).forEach(sm => {
+                sm.style.display = 'none';
+            });
+
+            // Reset all arrows
+            document.querySelectorAll('.arrow-main-menu-m').forEach(arrow => {
+                arrow.classList.remove('turn-arrow-main-menu-m');
+            });
+
+            // Toggle current submenu and arrow
+            if (!isVisible) {
+                submenu.style.display = 'block';
+                toggleBtn.classList.add('turn-arrow-main-menu-m');
+            } else {
+                submenu.style.display = 'none';
+                toggleBtn.classList.remove('turn-arrow-main-menu-m');
+            }
+        }
+    }
+
+    // Language toggle
     document.querySelectorAll('.js-toggle-language').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
             e.preventDefault();
-            const submenu = document.querySelector('.js-submenu-language');
-            if (submenu) {
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            }
+            toggleSubMenu(this, '.js-submenu-language');
         });
     });
-    
-    // Mobile currency toggle
+
+    // Currency toggle
     document.querySelectorAll('.js-toggle-currency').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
             e.preventDefault();
-            const submenu = document.querySelector('.js-submenu-currency');
-            if (submenu) {
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            }
+            toggleSubMenu(this, '.js-submenu-currency');
         });
     });
-    
-    // Mobile language selection
+
+    // Language selection
     document.querySelectorAll('.js-submenu-language a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const langText = this.innerText.trim();
             let langCode = 'en';
-            
-            switch(langText) {
+
+            switch (langText) {
                 case 'English': langCode = 'en'; break;
                 case 'العربية': langCode = 'ar'; break;
                 case '中国人': langCode = 'zh'; break;
                 case 'français': langCode = 'fr'; break;
                 case 'русский язык': langCode = 'ru'; break;
             }
-            
+
             changeLanguage(langCode);
-            
-            // Hide the submenu after selection
+
+            // Close language submenu and reset arrow
             const submenu = document.querySelector('.js-submenu-language');
-            if (submenu) {
-                submenu.style.display = 'none';
-            }
+            if (submenu) submenu.style.display = 'none';
+
+            document.querySelectorAll('.js-toggle-language').forEach(t => {
+                t.classList.remove('turn-arrow-main-menu-m');
+            });
         });
     });
-    
-    // Mobile currency selection
+
+    // Currency selection
     document.querySelectorAll('.js-submenu-currency a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const currencyCode = this.innerText.trim().toLowerCase();
             changeCurrency(currencyCode);
-            
-            // Hide the submenu after selection
+
+            // Close currency submenu and reset arrow
             const submenu = document.querySelector('.js-submenu-currency');
-            if (submenu) {
-                submenu.style.display = 'none';
-            }
+            if (submenu) submenu.style.display = 'none';
+
+            document.querySelectorAll('.js-toggle-currency').forEach(t => {
+                t.classList.remove('turn-arrow-main-menu-m');
+            });
         });
     });
 }
+
+document.querySelector('.js-toggle-language').addEventListener('click', function(e) {
+e.preventDefault();
+const submenu = document.querySelector('.js-submenu-language');
+submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+this.classList.toggle('turn-arrow-main-menu-m');
+});
+
+document.querySelector('.js-toggle-currency').addEventListener('click', function(e) {
+e.preventDefault();
+const submenu = document.querySelector('.js-submenu-currency');
+submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+this.classList.toggle('turn-arrow-main-menu-m');
+});
+
 
 // Initialize header template selectors
 function initializeHeaderTemplateSelectors() {
