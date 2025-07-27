@@ -34,7 +34,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/cinderella-premium.css">
+	<link rel="stylesheet" type="text/css" href="css/addresses.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -294,63 +294,82 @@
 		</div>
 	</div>
 	<!-- Content -->
-	<section class="bg0 p-t-100 p-b-100">
+	<section class="bg2 p-t-100 p-b-100">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<div id="account-sidebar" class="account-sidebar">
-						<ul>
-							<li><a href="dashboard.html">Dashboard</a></li>
-							<li><a href="orders.html">Orders</a></li>
-							<li><a href="downloads.html">Downloads</a></li>
-							<li><a href="addresses.html">Addresses</a></li>
-							<li><a href="account-details.html">Account details</a></li>
-							<li><a href="wishlist.html">Wishlist</a></li>
-							<li><a href="logout.html">Logout</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-9">
+			<div class="row justify-content-center">
+				<div class="col-md-10">
 					<div class="p-l-10 p-lr-0-lg">
-						<h4 class="mtext-105 cl2 p-b-30">
-							Addresses
-						</h4>
-						<p class="stext-113 cl6 p-b-26">
-							The following addresses will be used on the checkout page by default.
-						</p>
-						<div class="row">
-							<div class="col-md-6">
-								<h5 class="mtext-106 cl2 p-b-20">
-									Billing address
-								</h5>
-								<address>
-									[Full Name]<br>
-									[Company Name]<br>
-									[Street Address]<br>
-									[City], [State] [Zip Code]<br>
-									[Country]
-								</address>
-								<a href="#" class="btn btn-primary">Edit</a>
+						<h4 class="mtext-105 cl2 p-b-30">Addresses</h4>
+						<p class="stext-113 cl6 p-b-40">The following addresses will be used on the checkout page by default.</p>
+
+						<div class="address-form-group">
+							<!-- Billing Address -->
+							<div class="address-box">
+								<h5 class="mtext-106 cl2 p-b-20">Billing address</h5>
+
+								<!-- Display box (if empty) -->
+								<div id="billing-display">
+									<p class="stext-113 cl6">No billing address set yet.</p>
+									<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04" onclick="showBillingForm()">Add</button>
+								</div>
+
+								<!-- Billing form (hidden initially) -->
+								<div id="billing-form" style="display: none;">
+									<form onsubmit="saveBilling(event)">
+										<input type="text" placeholder="Full Name *" required class="form-control m-b-10">
+										<input type="text" placeholder="Country / Region *" value="Pakistan" required class="form-control m-b-10">
+										<input type="text" placeholder="Street address *" required class="form-control m-b-10">
+										<input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="form-control m-b-10">
+										<input type="text" placeholder="Town / City *" required class="form-control m-b-10">
+										<input type="text" placeholder="State / County *" required class="form-control m-b-10">
+										<input type="text" placeholder="Phone *" required class="form-control m-b-10">
+										<input type="email" placeholder="Email address (optional)" value="umerf2700@gmail.com" class="form-control m-b-10">
+										<div class="form-buttons">
+											<button type="submit" class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">Save address</button>
+											<button id="billing-cancel" onclick="hideBillingForm()" style="display:none;" class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">❌ Cancel</button>
+
+										</div>
+									</form>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h5 class="mtext-106 cl2 p-b-20">
-									Shipping address
-								</h5>
-								<address>
-									[Full Name]<br>
-									[Company Name]<br>
-									[Street Address]<br>
-									[City], [State] [Zip Code]<br>
-									[Country]
-								</address>
-								<a href="#" class="btn btn-primary">Edit</a>
+
+							<!-- Shipping Address -->
+							<div class="address-box">
+								<h5 class="mtext-106 cl2 p-b-20">Shipping address</h5>
+
+								<!-- Display box (if empty) -->
+								<div id="shipping-display">
+									<p class="stext-113 cl6">No shipping address set yet.</p>
+									<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04" onclick="showShippingForm()">Add</button>
+								</div>
+
+								<!-- Shipping form (hidden initially) -->
+								<div id="shipping-form" style="display: none;">
+									<form onsubmit="saveShipping(event)">
+										<input type="text" placeholder="First name *" required class="form-control m-b-10">
+										<input type="text" placeholder="Last name *" required class="form-control m-b-10">
+										<input type="text" placeholder="Company name (optional)" class="form-control m-b-10">
+										<input type="text" placeholder="Country / Region *" required class="form-control m-b-10">
+										<input type="text" placeholder="Street address *" required class="form-control m-b-10">
+										<input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="form-control m-b-10">
+										<input type="text" placeholder="Town / City *" required class="form-control m-b-10">
+										<input type="text" placeholder="State / County *" required class="form-control m-b-10">
+										<input type="text" placeholder="Postcode / ZIP *" required class="form-control m-b-10">
+										<div class="form-buttons">
+											<button type="submit" class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">Save address</button>
+											<button id="shipping-cancel" onclick="hideShippingForm()" style="display:none;" class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">❌ Cancel</button>
+										</div>
+									</form>
+								</div>
 							</div>
-						</div>
+						</div> <!-- /address-form-group -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+
 
 <!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -387,7 +406,7 @@
 						</li>
 
 						<li class="p-b-10">
-							<a href="shop.html?category=abaya" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="traditional.html" class="stext-107 cl7 hov-cl1 trans-04">
 								Abaya
 							</a>
 						</li>
@@ -419,7 +438,7 @@
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="help.html" class="stext-107 cl7 hov-cl1 trans-04">
 								FAQs
 							</a>
 						</li>
@@ -537,6 +556,7 @@
 	<script src="js/main.js"></script>
 	<script src="js/language-currency.js"></script>
 	<script src="js/blocks.js"></script>
+	<script src="js/addresses.js"></script>
 
 	<script src="js/auth.js"></script>
 </body>
