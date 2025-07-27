@@ -112,11 +112,9 @@ function logoutUser() {
     currentUser = null;
     localStorage.removeItem('currentUser');
     updateAuthUI();
-    
-    // Redirect to home page if on a protected page
-    if (window.location.pathname.includes('account') || window.location.pathname.includes('profile')) {
-        window.location.href = 'index.html';
-    }
+
+    // Always redirect to login page on logout
+    window.location.href = 'login.html';
 }
 
 function updateAuthUI() {
@@ -132,30 +130,50 @@ function updateAuthUI() {
                     e.preventDefault();
                     return false;
                 };
-                
-                // Add logout option
-                if (!desktopDropdown.querySelector('.logout-item')) {
-                    const logoutItem = document.createElement('a');
+
+                // Correct order: from Dashboard to Account details
+                const options = [
+                    { text: 'Dashboard', href: 'dashboard.html' },
+                    { text: 'Orders', href: 'orders.html' },
+                    { text: 'Addresses', href: 'addresses.html' },
+                    { text: 'Account details', href: 'account-details.html' }
+                ];
+
+                // Insert in correct order after loginItem
+                let previousItem = loginItem;
+                options.forEach(opt => {
+                    if (!desktopDropdown.querySelector(`a[href="${opt.href}"]`)) {
+                        const item = document.createElement('a');
+                        item.className = 'dropdown-item';
+                        item.href = opt.href;
+                        item.textContent = opt.text;
+                        desktopDropdown.insertBefore(item, previousItem.nextSibling);
+                        previousItem = item;
+                    }
+                });
+
+                // Add logout option (ensure functional)
+                let logoutItem = desktopDropdown.querySelector('.logout-item');
+                if (!logoutItem) {
+                    logoutItem = document.createElement('a');
                     logoutItem.className = 'dropdown-item logout-item';
                     logoutItem.href = '#';
                     logoutItem.innerHTML = 'Logout';
-                    logoutItem.onclick = (e) => {
-                        e.preventDefault();
-                        logoutUser();
-                        return false;
-                    };
-                    desktopDropdown.insertBefore(logoutItem, loginItem.nextSibling);
+                    desktopDropdown.appendChild(logoutItem);
                 }
+                logoutItem.onclick = (e) => {
+                    e.preventDefault();
+                    logoutUser();
+                    return false;
+                };
             } else {
                 loginItem.innerHTML = 'Login / Signup';
                 loginItem.href = 'login.html';
                 loginItem.onclick = null;
-                
-                // Remove logout option
-                const logoutItem = desktopDropdown.querySelector('.logout-item');
-                if (logoutItem) {
-                    logoutItem.remove();
-                }
+
+                // Remove user menu items and logout
+                const extraItems = desktopDropdown.querySelectorAll('.dropdown-item:not([href="login.html"])');
+                extraItems.forEach(el => el.remove());
             }
         }
     }
@@ -172,28 +190,53 @@ function updateAuthUI() {
                     e.preventDefault();
                     return false;
                 };
-                
-                // Add logout option for mobile
-                if (!mobileAccountMenu.querySelector('.mobile-logout-item')) {
-                    const mobileLogoutItem = document.createElement('li');
-                    mobileLogoutItem.innerHTML = '<a href="#" class="mobile-logout-item">Logout</a>';
-                    mobileLogoutItem.querySelector('a').onclick = (e) => {
-                        e.preventDefault();
-                        logoutUser();
-                        return false;
-                    };
-                    mobileLoginItem.parentElement.parentNode.insertBefore(mobileLogoutItem, mobileLoginItem.parentElement.nextSibling);
+
+                const options = [
+                    { text: 'Dashboard', href: 'dashboard.html' },
+                    { text: 'Orders', href: 'orders.html' },
+                    { text: 'Addresses', href: 'addresses.html' },
+                    { text: 'Account details', href: 'account-details.html' }
+                ];
+
+                let previousItem = mobileLoginItem.parentElement;
+                options.forEach(opt => {
+                    if (!mobileAccountMenu.querySelector(`a[href="${opt.href}"]`)) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${opt.href}">${opt.text}</a>`;
+                        mobileLoginItem.parentElement.parentNode.insertBefore(li, previousItem.nextSibling);
+                        previousItem = li;
+                    }
+                });
+
+                // Add logout option (ensure functional)
+                let mobileLogoutItem = mobileAccountMenu.querySelector('.mobile-logout-item');
+                if (!mobileLogoutItem) {
+                    const li = document.createElement('li');
+                    li.innerHTML = '<a href="#" class="mobile-logout-item">Logout</a>';
+                    mobileLogoutItem = li.querySelector('a');
+                    mobileLoginItem.parentElement.parentNode.appendChild(li);
+                } else {
+                    mobileLogoutItem = mobileLogoutItem;
                 }
+
+                mobileLogoutItem.onclick = (e) => {
+                    e.preventDefault();
+                    logoutUser();
+                    return false;
+                };
             } else {
                 mobileLoginItem.innerHTML = 'Login / Signup';
                 mobileLoginItem.href = 'login.html';
                 mobileLoginItem.onclick = null;
-                
-                // Remove logout option for mobile
-                const mobileLogoutItem = mobileAccountMenu.querySelector('.mobile-logout-item');
-                if (mobileLogoutItem) {
-                    mobileLogoutItem.parentElement.remove();
-                }
+
+                // Remove all user items and logout
+                const items = mobileAccountMenu.querySelectorAll('li');
+                items.forEach(li => {
+                    const a = li.querySelector('a');
+                    if (a && a.href !== location.origin + '/login.html') {
+                        li.remove();
+                    }
+                });
             }
         }
     }
